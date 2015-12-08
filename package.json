@@ -1,0 +1,26 @@
+{
+  "name": "fit-commit-js",
+  "version": "0.0.0",
+  "description": "An npm package to validate commits according to community guidelines",
+  "author": "Daniela Valero",
+  "license": "Apache Version 2.0",
+  "main": "bin/fit-commit-js.js",
+  "scripts": {
+    "test": "mocha --harmony --ui tdd --reporter dot"
+  },
+  "engines": {
+    "node": ">=4.1.0"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "fit-commit"
+  ],
+
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "mocha": "^2.3.4",
+    "ramda": "^0.18.0"
+  }
+}
