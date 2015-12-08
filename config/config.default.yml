@@ -1,20 +1,15 @@
 ---
-Validators/LineLength:
+Validators.lineLength:
   Enabled: true
   MaxLineLength: 72
   SubjectWarnLength: 50
   AllowLongUrls: true
-Validators/Tense:
+Validators.tense:
   Enabled: true
-Validators/SubjectPeriod:
+Validators.subjectPeriod:
+  Enabled: false
+Validators.capitalizeSubject:
   Enabled: true
-Validators/CapitalizeSubject:
-  Enabled: true
-Validators/Wip:
+Validators.Wip:
   Enabled:
     - master
-Validators/Frathouse:
-  Enabled:
-    - master
-Validators/Foobar:
-  Enabled: true

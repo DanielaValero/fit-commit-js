@@ -1,0 +1,13 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true,
+    "scheduleNextTick": true
+  },
+  "rules": {
+      "func-names": 0
+  }
+}

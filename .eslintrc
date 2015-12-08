@@ -1,1 +1,4 @@
-{ "extends": "airbnb/base" }
+{
+  "root": true,
+  "extends": "airbnb/base"
+ }

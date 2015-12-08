@@ -6,17 +6,20 @@
   "license": "Apache Version 2.0",
   "main": "bin/fit-commit-js.js",
   "scripts": {
-    "test": "mocha --harmony --ui tdd --reporter dot"
+    "test": "mocha --harmony --ui tdd --reporter dot",
+    "watch": "mocha debug --watch --reporter dot --harmony"
   },
   "engines": {
     "node": ">=4.1.0"
+  },
+  "fitCommitJs": {
+    "file": "config/config.defualt.yml"
   },
   "keywords": [
     "git",
     "commit",
     "fit-commit"
   ],
-
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
