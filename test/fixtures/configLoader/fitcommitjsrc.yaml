@@ -1,0 +1,16 @@
+---
+validators:
+  lineLength:
+    enabled: true
+    maxLineLength: 72
+    subjectWarnLength: 50
+    allowLongUrls: true
+  tense:
+    enabled: true
+  subjectPeriod:
+    enabled: false
+    capitalizeSubject:
+    enabled: true
+  wip:
+    enabled:
+      - master

@@ -1,0 +1,22 @@
+{
+  "validators": {
+    "lineLength": {
+      "enabled": true,
+      "maxLineLength": 72,
+      "subjectWarnLength": 50,
+      "allowLongUrls": true
+    },
+    "tense": {
+      "enabled": true
+    },
+    "subjectPeriod": {
+      "enabled": true,
+      "capitalizeSubject": null
+    },
+    "Wip": {
+      "enabled": [
+        "master"
+      ]
+    }
+  }
+}
