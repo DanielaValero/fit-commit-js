@@ -1,5 +1,5 @@
 const assert = require( 'assert' );
-const fileFinder = require( '../lib/fileFinder' );
+const fileFinder = require( '../lib/config/fileFinder' );
 const path = require( 'path' );
 
 suite( 'fileFinder | ', () => {

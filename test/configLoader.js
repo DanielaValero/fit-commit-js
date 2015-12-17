@@ -1,5 +1,5 @@
 const assert = require( 'assert' );
-const configLoader = require( '../lib/configLoader' );
+const configLoader = require( '../lib/config/configLoader' );
 
 
 suite( 'configLoader | ', () => {
