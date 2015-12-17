@@ -7,7 +7,8 @@
   "main": "bin/fit-commit-js.js",
   "scripts": {
     "test": "mocha --harmony --ui tdd --reporter dot",
-    "watch": "mocha debug --watch --reporter dot --harmony"
+    "watch": "mocha debug --watch --reporter dot --harmony",
+    "debugTest": "node-debug _mocha --ui tdd --reporter dot"
   },
   "engines": {
     "node": ">=4.1.0"
@@ -21,8 +22,11 @@
     "fit-commit"
   ],
   "devDependencies": {
+    "debug": "^2.2.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
+    "is-my-json-valid": "^2.12.3",
+    "js-yaml": "^3.4.6",
     "mocha": "^2.3.4",
     "ramda": "^0.18.0"
   }
