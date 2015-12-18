@@ -6,9 +6,9 @@
   "license": "Apache Version 2.0",
   "main": "bin/fit-commit-js.js",
   "scripts": {
-    "test": "mocha --harmony --ui tdd --reporter dot",
-    "watch": "mocha debug --watch --reporter dot --harmony",
-    "debugTest": "node-debug _mocha --ui tdd --reporter dot"
+    "test": "NODE_ENV=test mocha --harmony --recursive --ui tdd --reporter dot",
+    "watch": "NODE_ENV=test mocha debug --recursive  --watch --reporter dot --harmony",
+    "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"
   },
   "engines": {
     "node": ">=4.1.0"
@@ -29,6 +29,7 @@
     "js-yaml": "^3.4.6",
     "mocha": "^2.3.4",
     "npmlog": "^2.0.0",
-    "ramda": "^0.18.0"
+    "ramda": "^0.18.0",
+    "sinon": "^1.17.2"
   }
 }

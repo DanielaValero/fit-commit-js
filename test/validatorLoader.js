@@ -6,7 +6,7 @@ const R = require( 'Ramda' );
 suite( 'validatorLoader | ', () => {
   const fixturesPath = path.resolve( __dirname, 'fixtures/validatorLoader/' );
 
-  afterEach( ( done ) => {
+  suiteTeardown( ( done ) => {
     done();
   } );
 

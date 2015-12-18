@@ -14,7 +14,7 @@ suite( 'configLoader | ', () => {
     },
   };
 
-  afterEach( ( done ) => {
+  suiteTeardown( ( done ) => {
     done();
   } );
 
