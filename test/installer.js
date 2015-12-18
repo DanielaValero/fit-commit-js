@@ -1,6 +1,5 @@
 const assert = require( 'assert' );
 const installer = require( '../lib/installer' );
-const path = require( 'path' );
 const fs = require( 'fs' );
 
 suite( 'installer | ', () => {

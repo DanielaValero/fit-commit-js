@@ -9,7 +9,7 @@ validators:
     enabled: true
   subjectPeriod:
     enabled: false
-    capitalizeSubject:
+  capitalizeSubject:
     enabled: true
   wip:
     enabled:

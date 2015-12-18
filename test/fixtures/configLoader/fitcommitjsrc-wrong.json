@@ -10,8 +10,10 @@
       "enabled": true
     },
     "subjectPeriod": {
-      "enabled": true,
-      "capitalizeSubject": null
+      "enabled": false
+    },
+    "capitalizeSubject": {
+      "enabled": true
     },
     "wip": {
       "enabled": [

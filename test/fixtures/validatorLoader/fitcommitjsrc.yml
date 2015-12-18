@@ -6,11 +6,11 @@ validators:
     subjectWarnLength: 50
     allowLongUrls: true
   tense:
-    enabled: true
+    enabled: false
   subjectPeriod:
     enabled: false
   capitalizeSubject:
     enabled: true
   wip:
-    enabled:
-      - master
+    enabled: true
+      #- master

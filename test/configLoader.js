@@ -14,6 +14,10 @@ suite( 'configLoader | ', () => {
     },
   };
 
+  afterEach( ( done ) => {
+    done();
+  } );
+
   test( 'should load the yml config file', () => {
     const config = configLoader.load( 'test/fixtures/configLoader/fitcommitjsrc.yml' );
     assert.equal( config.validators.lineLength.enabled, expected.validators.lineLength.enabled );

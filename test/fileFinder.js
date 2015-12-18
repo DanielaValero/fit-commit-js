@@ -6,6 +6,9 @@ suite( 'fileFinder | ', () => {
   const fixturesPath = path.resolve( __dirname, 'fixtures/fileFinder/' );
   const subdir = path.join( fixturesPath, '/subdir/subdir' );
 
+  afterEach( ( done ) => {
+    done();
+  } );
 
   test( 'should find the a config file in the directory structure', () => {
     const foundPath = fileFinder.findFileInDirectory( subdir );
