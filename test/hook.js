@@ -16,8 +16,6 @@ suite( 'Hook | ', () => {
 
   suiteSetup( () => {
     sandbox = sinon.sandbox.create();
-
-
     sandbox.stub( process, 'argv', [ '/path/to/node', '/path/to/gitHook', commitMessageMock ] );
   } );
 
@@ -26,7 +24,8 @@ suite( 'Hook | ', () => {
     sandbox.restore();
   } );
 
-  test( 'Should extract the message from the commit', () => {
-    hook.extractCommitMessage();
+  test( 'Should extract the message from the commit and delivers a string', () => {
+    const message = hook.extractCommitMessage();
+    assert.notEqual( message, '' );
   } );
 } );
