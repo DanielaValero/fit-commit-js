@@ -1,3 +1,7 @@
 {
-  "preset": "airbnb"
+  "preset": "airbnb",
+  "disallowSpacesInsideParentheses": false,
+  "disallowSpacesInsideObjectBrackets": false,
+  "disallowSpacesInsideBrackets": false,
+  "disallowSpacesInsideArrayBrackets": false
 }
