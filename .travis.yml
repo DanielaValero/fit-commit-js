@@ -1,9 +1,7 @@
 language: node_js
 node_js:
-    - "0.10"
-    - "0.12"
-    - iojs
-    - "4"
-    - "5"
+    - "4.0"
+    - "4.1"
+    - "5.3"
 sudo: false
-script: "npm run test"
+script: "npm test"
