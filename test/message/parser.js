@@ -1,4 +1,4 @@
-const assert = require( 'assert' );
+const assert = require( 'chai' ).assert;
 const parser = require( '../../lib/message/parser' );
 const path = require( 'path' );
 const R = require( 'Ramda' );

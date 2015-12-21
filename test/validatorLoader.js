@@ -1,7 +1,6 @@
-const assert = require( 'assert' );
 const validatorLoader = require( '../lib/validatorLoader' );
 const path = require( 'path' );
-const R = require( 'Ramda' );
+const assert = require( 'chai' ).assert;
 
 suite( 'validatorLoader | ', () => {
   const fixturesPath = path.resolve( __dirname, 'fixtures/validatorLoader/' );
@@ -12,29 +11,29 @@ suite( 'validatorLoader | ', () => {
 
   test( 'Should get the configuration file into an object', () => {
     const config = validatorLoader.getConfigurationFile( fixturesPath );
-    assert.equal( R.is( Object, config ), true );
+    assert.isObject( config, true );
   } );
 
   test( 'Should load all the validator files into an array', () => {
     const validators = validatorLoader.getValidatorFiles();
-    assert.equal( R.isArrayLike( validators ), true );
+    assert.typeOf( validators, 'array' );
   } );
 
   test( 'Should get an object with the configured enabled validators', () => {
     const validators = validatorLoader.getEnabledValidatorsObject( fixturesPath );
-    assert.equal( R.is( Object, validators ), true );
-    assert.equal( R.is( Object, validators.lineLength ), true );
+    assert.isObject( validators, true );
+    assert.isObject( validators.lineLength, true );
     assert.equal( validators.lineLength.enabled, true );
   } );
 
   test( 'Should get an array with the filenames of the enabled validators', () => {
     const validatorFiles = validatorLoader.getEnabledValidatorsFiles( fixturesPath );
-    assert.equal( R.isArrayLike( validatorFiles ), true );
-    assert.equal( R.contains( 'lineLength', validatorFiles ), true );
+    assert.typeOf( validatorFiles, 'array', 'validatorLoader.getEnabledValidatorsFiles: Retrieves array' );
+    assert.include( validatorFiles, 'lineLength', 'One of the enabled validators is lineLength' );
   } );
 
   test( 'Should load the enabled validators', () => {
     const validators = validatorLoader.loadValidators( fixturesPath );
-    assert.equal( typeof( validators.lineLength.validateLineLegth ), 'function' );
+    assert.typeOf( validators.lineLength.validate, 'function' );
   } );
 } );

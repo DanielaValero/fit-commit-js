@@ -1,4 +1,4 @@
-const assert = require( 'assert' );
+const assert = require( 'chai' ).assert;
 const fileFinder = require( '../lib/config/fileFinder' );
 const path = require( 'path' );
 

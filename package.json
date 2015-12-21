@@ -6,6 +6,7 @@
   "license": "Apache Version 2.0",
   "main": "bin/fit-commit-js.js",
   "scripts": {
+    "style": "jscs -v lib/*.js",
     "test": "NODE_ENV=test mocha --harmony --recursive --ui tdd --reporter dot",
     "watch": "NODE_ENV=test mocha debug --recursive  --watch --reporter dot --harmony",
     "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"
@@ -22,6 +23,7 @@
     "fit-commit"
   ],
   "devDependencies": {
+    "chai": "^3.4.1",
     "debug": "^2.2.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
