@@ -10,7 +10,7 @@ validators:
   subjectPeriod:
     enabled: false
   capitalizeSubject:
-    enabled: false
+    enabled: true
   wip:
     enabled: true
       #- master

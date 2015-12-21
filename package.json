@@ -23,6 +23,7 @@
     "fit-commit"
   ],
   "devDependencies": {
+    "chai": "^3.4.1",
     "debug": "^2.2.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
