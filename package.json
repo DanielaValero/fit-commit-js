@@ -1,21 +1,22 @@
 {
   "name": "fit-commit-js",
   "version": "0.0.1",
-  "description": "An npm package to validate commits according to community guidelines",
+  "description": "A npm package to validate commits according to community guidelines",
   "author": "Daniela Valero",
-  "license": "Apache Version 2.0",
+  "license": "GPLv2",
   "main": "bin/fit-commit-js.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanielaValero/fit-commit-js"
+  },
   "scripts": {
-    "style": "jscs -v lib/*.js",
+    "style": "jscs -v lib/**/*.js",
     "test": "NODE_ENV=test mocha --harmony --recursive --ui tdd --reporter dot",
     "watch": "NODE_ENV=test mocha debug --recursive  --watch --reporter dot --harmony",
     "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"
   },
   "engines": {
     "node": ">=4.1.0"
-  },
-  "fitCommitJs": {
-    "file": "config/config.defualt.yml"
   },
   "keywords": [
     "git",
