@@ -4,9 +4,8 @@ const assert = require( 'chai' ).assert;
 const hook = require( '../lib/hook' );
 const process = require( 'process' );
 const path = require( 'path' );
-const R = require( 'Ramda' );
 const sinon = require( 'sinon' );
-
+const lineLenth = require( '../lib/validators/lineLength' );
 
 
 suite( 'Hook | ', () => {
@@ -33,12 +32,11 @@ suite( 'Hook | ', () => {
     const parsedMessage = hook.getParsedMessage();
     assert.typeOf( parsedMessage, 'array', 'ParsedMessage is an array' );
     assert.include( parsedMessage, 'This is a relevant line' );
-
   } );
 
-
   test( 'Should run the defined validators', () => {
+    const validatorSpy = sandbox.spy( lineLenth, 'validate' );
     hook.runValidators( fixturesPath );
-    //    assert.( );
+    assert.equal( validatorSpy.called, true, 'The lineLenth.validate function was called' );
   } );
 } );
