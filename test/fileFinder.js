@@ -6,7 +6,7 @@ suite( 'fileFinder | ', () => {
   const fixturesPath = path.resolve( __dirname, 'fixtures/fileFinder/' );
   const subdir = path.join( fixturesPath, '/subdir/subdir' );
 
-  afterEach( ( done ) => {
+  suiteTeardown( ( done ) => {
     done();
   } );
 
