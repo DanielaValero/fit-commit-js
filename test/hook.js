@@ -5,7 +5,12 @@ const hook = require( '../lib/hook' );
 const process = require( 'process' );
 const path = require( 'path' );
 const sinon = require( 'sinon' );
-const lineLenth = require( '../lib/validators/lineLength' );
+const proxyquire = require( 'proxyquire' );
+const lineLenth = proxyquire( '../lib/validators/lineLength', {
+  validate: function validate() {
+    return true;
+  }
+} );
 
 
 suite( 'Hook | ', () => {
