@@ -12,7 +12,7 @@ suite( 'fileFinder | ', () => {
 
   test( 'should find the a config file in the directory structure', () => {
     const foundPath = fileFinder.findFileInDirectory( subdir );
-    const expectedPath = path.join( fixturesPath, 'fitcommitjsrc.json' );
+    const expectedPath = path.join( fixturesPath, '.fitcommitjsrc.json' );
     assert.equal( foundPath, expectedPath );
   } );
 } );

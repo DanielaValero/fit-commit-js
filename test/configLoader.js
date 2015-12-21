@@ -19,12 +19,12 @@ suite( 'configLoader | ', () => {
   } );
 
   test( 'should load the yml config file', () => {
-    const config = configLoader.load( 'test/fixtures/configLoader/fitcommitjsrc.yml' );
+    const config = configLoader.load( 'test/fixtures/configLoader/.fitcommitjsrc.yml' );
     assert.equal( config.validators.lineLength.enabled, expected.validators.lineLength.enabled );
   } );
 
   test( 'should load the json config file', () => {
-    const config = configLoader.load( 'test/fixtures/configLoader/fitcommitjsrc.json' );
+    const config = configLoader.load( 'test/fixtures/configLoader/.fitcommitjsrc.json' );
     assert.equal( config.validators.lineLength.enabled, expected.validators.lineLength.enabled );
   } );
 
@@ -34,7 +34,7 @@ suite( 'configLoader | ', () => {
   } );
 
   test( 'should validators should be undefined when wrongly specified', () => {
-    const config = configLoader.load( 'test/fixtures/configLoader/fitcommitjsrc-wrong.json' );
+    const config = configLoader.load( 'test/fixtures/configLoader/.fitcommitjsrc-wrong.json' );
     assert.equal( config.validators, undefined );
   } );
 } );
