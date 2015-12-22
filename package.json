@@ -10,7 +10,7 @@
     "url": "https://github.com/DanielaValero/fit-commit-js"
   },
   "scripts": {
-    "style": "jscs -v lib/**/*.js",
+    "style": "jscs -v lib/**/*.js && jscs -v test/**/*.js && eslint lib/**/*.js &&  eslint test/lib/**/*.js",
     "test": "NODE_ENV=test mocha --harmony --recursive --ui tdd --reporter dot",
     "watch": "NODE_ENV=test mocha debug --recursive  --watch --reporter dot --harmony",
     "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"
@@ -35,6 +35,7 @@
     "eslint-config-airbnb": "^2.0.0",
     "mocha": "^2.3.4",
     "npmlog": "^2.0.0",
+    "proxyquire": "^1.7.3",
     "sinon": "^1.17.2"
   }
 }

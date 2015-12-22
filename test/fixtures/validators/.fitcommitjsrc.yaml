@@ -2,13 +2,12 @@
 validators:
   lineLength:
     enabled: true
-    maxLineLength: 72
+    lineLength: 72
     subjectMaxLength: 50
-    allowLongUrls: true
   tense:
     enabled: true
   subjectPeriod:
-    enabled: false
+    enabled: true
   capitalizeSubject:
     enabled: true
   wip:

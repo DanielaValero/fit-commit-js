@@ -1,5 +1,5 @@
 const assert = require( 'chai' ).assert;
-const installer = require( '../lib/installer' );
+const installer = require( '../../lib/installer' );
 const fs = require( 'fs' );
 
 suite( 'installer | ', () => {

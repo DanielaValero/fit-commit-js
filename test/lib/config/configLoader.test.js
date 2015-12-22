@@ -1,14 +1,15 @@
 const assert = require( 'chai' ).assert;
-const configLoader = require( '../lib/config/configLoader' );
-
+const path = require( 'path' );
+const configLoader = require( '../../../lib/config/configLoader' );
 
 suite( 'configLoader | ', () => {
+  const fixturesPath = path.resolve( __dirname, '../../fixtures/configLoader/' );
   const expected = {
     validators: {
       lineLength: {
         enabled: true,
         maxLineLength: 72,
-        subjectWarnLength: 50,
+        subjectMaxLength: 50,
         allowLongUrls: true,
       },
     },
@@ -33,8 +34,13 @@ suite( 'configLoader | ', () => {
     assert.equal( config.validators.lineLength.enabled, expected.validators.lineLength.enabled );
   } );
 
-  test( 'should validators should be undefined when wrongly specified', () => {
+  test( 'If no config file found, nothing is retrieved', () => {
     const config = configLoader.load( 'test/fixtures/configLoader/.fitcommitjsrc-wrong.json' );
     assert.equal( config.validators, undefined );
+  } );
+
+  test( 'Should get the configuration file into an object', () => {
+    const config = configLoader.findAndLoad( fixturesPath );
+    assert.isObject( config, true );
   } );
 } );
