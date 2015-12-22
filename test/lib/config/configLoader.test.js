@@ -1,9 +1,9 @@
 const assert = require( 'chai' ).assert;
 const path = require( 'path' );
-const configLoader = require( '../../lib/config/configLoader' );
+const configLoader = require( '../../../lib/config/configLoader' );
 
 suite( 'configLoader | ', () => {
-  const fixturesPath = path.resolve( __dirname, '../fixtures/configLoader/' );
+  const fixturesPath = path.resolve( __dirname, '../../fixtures/configLoader/' );
   const expected = {
     validators: {
       lineLength: {

@@ -1,21 +1,20 @@
 'use strict';
 
 const assert = require( 'chai' ).assert;
-const hook = require( '../lib/hook' );
 const process = require( 'process' );
 const path = require( 'path' );
 const sinon = require( 'sinon' );
 const proxyquire = require( 'proxyquire' );
-const validatorsConfig = require( '../lib/config/validatorsConfig' );
-const lineLenth = proxyquire( '../lib/validators/lineLength', {
+const hook = require( '../../lib/hook' );
+const validatorsConfig = require( '../../lib/config/validatorsConfig' );
+const lineLenth = proxyquire( '../../lib/validators/lineLength', {
   validate: function validate() {
     return true;
-  }
+  },
 } );
 
-
 suite( 'Hook | ', () => {
-  const fixturesPath = path.resolve( __dirname, 'fixtures/hook/' );
+  const fixturesPath = path.resolve( __dirname, '../fixtures/hook/' );
   const commitMessageMock = path.join( fixturesPath, 'commitMessage' );
   let sandbox;
 

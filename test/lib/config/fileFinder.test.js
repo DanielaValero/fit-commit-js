@@ -1,10 +1,10 @@
 const assert = require( 'chai' ).assert;
-const fileFinder = require( '../../lib/config/fileFinder' );
 const path = require( 'path' );
-const validatorsConfig = require( '../../lib/config/validatorsConfig' );
+const fileFinder = require( '../../../lib/config/fileFinder' );
+const validatorsConfig = require( '../../../lib/config/validatorsConfig' );
 
 suite( 'fileFinder | ', () => {
-  const fixturesPath = path.resolve( __dirname, '../fixtures/fileFinder/' );
+  const fixturesPath = path.resolve( __dirname, '../../fixtures/fileFinder/' );
   const subdir = path.join( fixturesPath, '/subdir/subdir' );
 
   suiteTeardown( ( done ) => {

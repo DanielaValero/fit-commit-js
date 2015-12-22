@@ -4,6 +4,7 @@
   "rules": {
     "space-in-parens": [2, "always"],
     "computed-property-spacing": [2, "always"],
-    "strict": [2, "global"]
+    "strict": [2, "global"],
+    "array-bracket-spacing": [2, "always"]
   }
  }

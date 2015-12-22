@@ -1,10 +1,9 @@
 const assert = require( 'chai' ).assert;
 const path = require( 'path' );
-const validatorsConfig = require( '../../lib/config/validatorsConfig' );
-
+const validatorsConfig = require( '../../../lib/config/validatorsConfig' );
 
 suite( 'validatorsConfig | ', () => {
-  const fixturesPath = path.resolve( __dirname, '../fixtures/configLoader/' );
+  const fixturesPath = path.resolve( __dirname, '../../fixtures/configLoader/' );
 
   setup( () => {
     validatorsConfig.clearEnabledValidators();
@@ -19,7 +18,7 @@ suite( 'validatorsConfig | ', () => {
     validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
     const validators = validatorsConfig.getEnabledValidators();
     assert.isObject( validators, true );
-    assert.equal( Object.keys( validators ).length, 0, 'The length of the validators object is 0' )
+    assert.equal( Object.keys( validators ).length, 0, 'The length of the validators object is 0' );
   } );
 
   test( 'Should get an object with the configured enabled validators', () => {

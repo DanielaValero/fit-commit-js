@@ -1,5 +1,5 @@
 const assert = require( 'chai' ).assert;
-const parser = require( '../../lib/message/parser' );
+const parser = require( '../../../lib/message/parser' );
 
 suite( 'Message.Parser | ', () => {
   const message = `This is a relevant line

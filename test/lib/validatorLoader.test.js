@@ -1,10 +1,10 @@
-const validatorLoader = require( '../lib/validatorLoader' );
 const path = require( 'path' );
 const assert = require( 'chai' ).assert;
-const validatorsConfig = require( '../lib/config/validatorsConfig' );
+const validatorsConfig = require( '../../lib/config/validatorsConfig' );
+const validatorLoader = require( '../../lib/validatorLoader' );
 
 suite( 'validatorLoader | ', () => {
-  const fixturesPath = path.resolve( __dirname, 'fixtures/validatorLoader/' );
+  const fixturesPath = path.resolve( __dirname, '../fixtures/validatorLoader/' );
 
   suiteTeardown( ( done ) => {
     validatorsConfig.clearEnabledValidators();

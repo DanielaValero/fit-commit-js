@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require( 'chai' ).assert;
-const error = require( '../../lib/message/error' );
+const error = require( '../../../lib/message/error' );
 
 suite( 'Message.Error | ', () => {
 

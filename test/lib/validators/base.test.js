@@ -1,10 +1,10 @@
 const assert = require( 'chai' ).assert;
-const validatorsConfig = require( '../../lib/config/validatorsConfig' );
-const base = require( '../../lib/validators/base' );
 const path = require( 'path' );
+const validatorsConfig = require( '../../../lib/config/validatorsConfig' );
+const base = require( '../../../lib/validators/base' );
 
 suite( 'Validators.Base | ', () => {
-  const fixturesPath = path.resolve( __dirname, '../fixtures/validators/base' );
+  const fixturesPath = path.resolve( __dirname, '../../fixtures/validators/base' );
 
   setup( () => {
     validatorsConfig.clearEnabledValidators();
@@ -12,7 +12,7 @@ suite( 'Validators.Base | ', () => {
 
   suiteSetup( () => {
     validatorsConfig.loadEnabledValidatorsObject( fixturesPath );
-  } )
+  } );
 
   suiteTeardown( ( done ) => {
     validatorsConfig.clearEnabledValidators();
