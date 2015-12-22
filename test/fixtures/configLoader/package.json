@@ -4,7 +4,7 @@
       "lineLength": {
         "enabled": true,
         "maxLineLength": 72,
-        "subjectWarnLength": 50,
+        "subjectMaxLength": 50,
         "allowLongUrls": true
       },
       "tense": {

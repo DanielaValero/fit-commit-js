@@ -6,6 +6,7 @@ const process = require( 'process' );
 const path = require( 'path' );
 const sinon = require( 'sinon' );
 const proxyquire = require( 'proxyquire' );
+const validatorsConfig = require( '../lib/config/validatorsConfig' );
 const lineLenth = proxyquire( '../lib/validators/lineLength', {
   validate: function validate() {
     return true;
@@ -24,8 +25,9 @@ suite( 'Hook | ', () => {
   } );
 
   suiteTeardown( ( done ) => {
-    done();
+    validatorsConfig.clearEnabledValidators();
     sandbox.restore();
+    done();
   } );
 
   test( 'Should extract the message from the commit and delivers a string', () => {
