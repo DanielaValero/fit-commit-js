@@ -7,7 +7,7 @@ validators:
   ticketCode:
     enabled: true
     ticketCodeText: 'FITCOMMITJS-'
-    oneTicketPerCommit: false
+    oneTicketPerCommit: true
   emptyLines:
     enabled: true
     emptyLines: 1,3
