@@ -2,8 +2,11 @@
 validators:
   lineLength:
     enabled: true
-    lineLength: 72
+    maxLineLength: 72
     subjectMaxLength: 50
+  emptyLines:
+    enabled: true
+    emptyLines: 1,3
   tense:
     enabled: false
   subjectPeriod:

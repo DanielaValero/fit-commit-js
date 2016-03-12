@@ -42,18 +42,11 @@ suite( 'Validators.LineLength | ', () => {
     assert.equal( hasErrors, true, 'First line longer than specified length' );
   } );
 
-  test( 'Should be errors if second line not empty', () => {
-    const validLines = [ 'Handle error messages of a given commit', 'not empty' ];
-    const hasErrors = lineLength.validate( validLines );
-
-    assert.equal( hasErrors, true, 'Second line not empty' );
-  } );
-
   test( 'Should be errors if third line longer than specified', () => {
-    const validLines = [ 'Handle error messages of a given commit', 'not empty', `Create a map to contain all the error messages of a given commit. Create a map to contain all the error messages of a given commit.` ];
+    const validLines = [ 'Handle error messages of a given commit', 'not empty', `Third line: Create a map to contain all the error messages of a given commit. Create a map to contain all the error messages of a given commit.` ];
     const hasErrors = lineLength.validate( validLines );
 
-    assert.equal( hasErrors, true, 'Second line not empty' );
+    assert.equal( hasErrors, true, 'Third line longer than specified' );
   } );
 
   test( 'Should not be errors if the validator is not enabled or not config object', () => {

@@ -19,11 +19,15 @@ suite( 'validatorLoader | ', () => {
   test( 'Should get an array with the filenames of the enabled validators', () => {
     const validatorFiles = validatorLoader.getEnabledValidatorsFiles( fixturesPath );
     assert.typeOf( validatorFiles, 'array', 'validatorLoader.getEnabledValidatorsFiles: Retrieves array' );
-    assert.include( validatorFiles, 'lineLength', 'One of the enabled validators is lineLength' );
+    assert.include( validatorFiles, 'emptyLines', 'One of the enabled validators is emptyLines' );
   } );
 
   test( 'Should load the enabled validators', () => {
     const validators = validatorLoader.loadValidators( fixturesPath );
-    assert.typeOf( validators.lineLength.validate, 'function' );
+    const emptyLinesValidator = validators[ 0 ];
+    assert.isArray( validators, 'Gets an array of validators' );
+    assert.lengthOf( validators, 3, 'Loads 3 enabled validators' );
+    assert.deepProperty( validators[ 1 ], 'lineLength', 'Contains lineLength validator' );
+    assert.typeOf( emptyLinesValidator.emptyLines.validate, 'function' );
   } );
 } );

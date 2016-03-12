@@ -12,6 +12,11 @@ const lineLenth = proxyquire( '../../lib/validators/lineLength', {
     return true;
   },
 } );
+const emptyLines = proxyquire( '../../lib/validators/emptyLines', {
+  validate: function validate() {
+    return true;
+  },
+} );
 
 suite( 'Hook | ', () => {
   const fixturesPath = path.resolve( __dirname, '../fixtures/hook/' );
@@ -41,8 +46,10 @@ suite( 'Hook | ', () => {
   } );
 
   test( 'Should run the defined validators', () => {
-    const validatorSpy = sandbox.spy( lineLenth, 'validate' );
+    const lineLenthValidatorSpy = sandbox.spy( lineLenth, 'validate' );
+    const emptyLinesValidatorSpy = sandbox.spy( emptyLines, 'validate' );
     hook.runValidators( fixturesPath );
-    assert.equal( validatorSpy.called, true, 'The lineLenth.validate function was called' );
+    assert.equal( emptyLinesValidatorSpy.called, true, 'The emptyLines.validate function was called' );
+    assert.equal( lineLenthValidatorSpy.called, true, 'The lineLenth.validate function was called' );
   } );
 } );
