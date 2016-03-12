@@ -5,6 +5,9 @@ validators:
     maxLineLength: 72
     subjectMaxLength: 50
     allowLongUrls: true
+  emptyLines:
+    enabled: true
+    emptyLines: 1,3
   tense:
     enabled: false
   subjectPeriod:
