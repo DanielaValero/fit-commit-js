@@ -7,6 +7,7 @@ A node version of [fit-commit](https://github.com/m1foley/fit-commit) by [Mike F
 
 # Validators
  - Line length
+ - Empty lines
  - Tags: feature, chore, bugfix, etc.
  - Ticket code
  - WIP: No merge work in progress into specified branch
