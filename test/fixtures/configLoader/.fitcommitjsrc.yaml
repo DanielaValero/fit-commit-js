@@ -14,5 +14,5 @@ validators:
   capitalizeSubject:
     enabled: true
   wip:
-    enabled:
-      - master
+    enabled: true
+    branch: master
