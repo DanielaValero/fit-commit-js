@@ -24,6 +24,7 @@
     "fit-commit"
   ],
   "dependencies": {
+    "git-rev-sync": "^1.4.0",
     "is-my-json-valid": "^2.12.3",
     "js-yaml": "^3.4.6",
     "ramda": "^0.18.0"
@@ -33,6 +34,7 @@
     "debug": "^2.2.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
+    "git-rev": "^0.2.1",
     "mocha": "^2.3.4",
     "npmlog": "^2.0.0",
     "proxyquire": "^1.7.3",
