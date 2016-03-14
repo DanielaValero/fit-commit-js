@@ -10,10 +10,12 @@ A node version of [fit-commit](https://github.com/m1foley/fit-commit) by [Mike F
  - Empty lines
  - Tags: feature, chore, bugfix, etc.
  - Ticket code
+ - Tense of the subject
+
  - WIP: No merge work in progress into specified branch
  - Capitalized subject
  - Subject with a period
- - Tense of the subject
+
 
 
 # Guidelines
