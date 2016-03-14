@@ -16,4 +16,4 @@ validators:
     enabled: true
   wip:
     enabled: true
-      #- master
+    branch: master
