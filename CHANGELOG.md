@@ -1,4 +1,4 @@
-# Version 0.1.0
+# Version 0.1.1
 
 ed425b6 Add empty lines validator
 f1a6083 Use property shorthands in exports
@@ -18,3 +18,8 @@ acdffd7 Add fileFinder and configLoader
 94182cf Extend config of eslint and jscs to compile with guidelines
 8aaf9fc Setup TDD
 8f1254a Setup file structure and base architecture
+
+
+# Version 0.1.2
+
+ 47b96ad - Update eslint version to prevent bug with previous one
