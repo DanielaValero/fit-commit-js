@@ -1,6 +1,6 @@
 {
   "name": "fit-commit-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A npm package to validate commits according to community guidelines",
   "author": "Daniela Valero",
   "license": "GPL-2.0",
