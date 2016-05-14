@@ -21,6 +21,19 @@ It creates a git commit hook that will be run each time you do a commit for your
 
 <!-- /TOC -->
 
+# Installation and Configuration
+
+To install it run:
+
+``
+$ npm i fit-commit-js
+``
+
+Then create your fitcomitjsrc.{yml, yaml, json} with your settings, and place it at the root of your project.
+
+You can also add a section in your package.json called: "fitcommitjsConfig", and add there your settings.
+
+
 # Available Validators
 
  - **Line length**
