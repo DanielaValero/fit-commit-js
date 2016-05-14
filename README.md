@@ -13,12 +13,39 @@ A node version of [fit-commit](https://github.com/m1foley/fit-commit) by [Mike F
  - Tags: feature, chore, bugfix, etc.
  - Ticket code
  - Tense of the subject
-
  - WIP: No merge work in progress into specified branch
  - Capitalized subject
  - Subject with a period
 
-
+# Sample of config file
+``yaml
+---
+validators:
+  lineLength:
+    enabled: true
+    maxLineLength: 72
+    subjectMaxLength: 50
+  ticketCode:
+    enabled: true
+    ticketCodeText: 'FITCOMMITJS-'
+    oneTicketPerCommit: false
+  emptyLines:
+    enabled: true
+    emptyLines: 1,3
+  tags:
+    enabled: true
+    tags: bugfix, chore, feature
+    lineOfTheTag: 4
+  tense:
+    enabled: true
+  subjectPeriod:
+    enabled: true
+  capitalizeSubject:
+    enabled: true
+  wip:
+    enabled: true
+    branch: master
+``
 
 # Guidelines
  - Use the ES2015 features [supported by node](https://nodejs.org/en/docs/es6/)
