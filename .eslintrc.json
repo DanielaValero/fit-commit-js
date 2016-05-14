@@ -1,10 +1,17 @@
 {
   "root": true,
-  "extends": "airbnb/base",
+  "extends": "airbnb-base",
   "rules": {
     "space-in-parens": [2, "always"],
     "computed-property-spacing": [2, "always"],
-    "strict": [2, "global"],
+    "strict": [0, "global"],
     "array-bracket-spacing": [2, "always"]
+  },
+  "ecmaFeatures": {
+     "modules": false
+  },
+  "env": {
+    "es6": true,
+    "node": true
   }
- }
+}

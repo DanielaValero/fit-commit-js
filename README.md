@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/DanielaValero/fit-commit-js.svg)](https://travis-ci.org/DanielaValero/fit-commit-js)
+[![Dependency Status](https://david-dm.org/DanielaValero/fit-commit-js.svg.svg)](https://david-dm.org/DanielaValero/fit-commit-js)
+[![Code Climate](https://codeclimate.com/github/DanielaValero/fit-commit-js/badges/gpa.svg)](https://codeclimate.com/github/DanielaValero/fit-commit-js)
 
 # Fit commit js
 

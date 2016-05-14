@@ -3,20 +3,22 @@
   "version": "0.1.0",
   "description": "A npm package to validate commits according to community guidelines",
   "author": "Daniela Valero",
-  "license": "GPLv2",
+  "license": "GPL-2.0",
   "main": "bin/fit-commit-js.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/DanielaValero/fit-commit-js"
   },
   "scripts": {
-    "style": "jscs -v lib/**/*.js && jscs -v test/**/*.js && eslint lib/**/*.js &&  eslint test/lib/**/*.js",
+    "jscs": "./node_modules/jscs/bin/jscs -v lib/**/*.js && ./node_modules/jscs/bin/jscs -v test/**/*.js",
+    "eslint": "./node_modules/eslint/bin/eslint.js lib/**/*.js &&  ./node_modules/eslint/bin/eslint.js test/lib/**/*.js",
+    "lint": "npm run jscs && npm run eslint",
     "test": "NODE_ENV=test mocha --harmony --recursive --ui tdd --reporter dot",
     "watch": "NODE_ENV=test mocha debug --recursive  --watch --reporter dot --harmony",
     "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"
   },
   "engines": {
-    "node": ">=4.1.0"
+    "node": ">=5.8.0"
   },
   "keywords": [
     "git",
@@ -25,16 +27,18 @@
   ],
   "dependencies": {
     "git-rev-sync": "^1.4.0",
-    "is-my-json-valid": "^2.12.3",
+    "is-my-json-valid": "^2.13.1",
     "js-yaml": "^3.4.6",
-    "ramda": "^0.18.0"
+    "ramda": "^0.21.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
     "debug": "^2.2.0",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.0.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0",
     "git-rev": "^0.2.1",
+    "jscs": "^3.0.3",
     "mocha": "^2.3.4",
     "npmlog": "^2.0.0",
     "proxyquire": "^1.7.3",
