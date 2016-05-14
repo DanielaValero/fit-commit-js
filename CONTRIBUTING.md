@@ -10,5 +10,6 @@ Contributions are encouraged through GitHub Pull Requests.
 
 Guidelines when adding new code:
 
-* Create tests when possible.
+* Create always tests.
 * Ensure the entire test suite still passes by running `npm test`.
+* Ensure that the code does not have lintin errors by running: `npm run lint`
