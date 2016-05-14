@@ -18,7 +18,8 @@ suite( 'validatorLoader | ', () => {
 
   test( 'Should get an array with the filenames of the enabled validators', () => {
     const validatorFiles = validatorLoader.getEnabledValidatorsFiles( fixturesPath );
-    assert.typeOf( validatorFiles, 'array', 'validatorLoader.getEnabledValidatorsFiles: Retrieves array' );
+    assert.typeOf( validatorFiles, 'array', `validatorLoader.getEnabledValidatorsFiles:
+                                              Retrieves array` );
     assert.include( validatorFiles, 'emptyLines', 'One of the enabled validators is emptyLines' );
   } );
 

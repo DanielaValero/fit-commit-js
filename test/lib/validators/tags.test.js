@@ -22,20 +22,24 @@ suite( 'Validators.tags | ', () => {
   } );
 
   test( 'Only one tag was used', () => {
-    const validLines = [ 'chore: Handle error', '', `Create a map commit.`, '' ];
+    const validLines = [ 'chore: Handle error', '', 'Create a map commit.', '' ];
     const hasErrors = tags.validate( validLines );
     assert.equal( hasErrors, false, 'Only one tag was used. Valid' );
   } );
 
   test( 'Should be errors if more than one tag was used', () => {
-    const validLines = [ 'feature: first line', 'bugfix: second line', `Fourth line`, 'fifth line' ];
+    const validLines = [ 'feature: first line',
+      'bugfix: second line',
+      'Fourth line',
+      'fifth line',
+    ];
     const hasErrors = tags.validate( validLines );
 
     assert.equal( hasErrors, true, 'More than one tag was used. Invalid' );
   } );
 
   test( 'Should be errors if one of defined tags was not used', () => {
-    const validLines = [ 'Handle', 'asdas', `Create at.`, 'foo' ];
+    const validLines = [ 'Handle', 'asdas', 'Create at.', 'foo' ];
     const hasErrors = tags.validate( validLines );
 
     assert.equal( hasErrors, true, 'None of the tags was used. Invalid' );
@@ -46,8 +50,10 @@ suite( 'Validators.tags | ', () => {
     validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
     error.clearErrorsMap();
 
-    const validLines = [ 'Handle error messages of a given commit longer than 50 chars', 'asdas', `Create a map to contain all the error messages of
-    a given commit.` ];
+    const validLines = [ 'Handle error messages of a given commit longer than 50 chars',
+      'asdas',
+      'Create a map to contain all the error messages of a given commit.',
+    ];
     const hasErrors = tags.validate( validLines );
     assert.equal( hasErrors, false, 'There is no error' );
   } );

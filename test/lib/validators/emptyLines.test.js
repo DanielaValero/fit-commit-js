@@ -22,13 +22,13 @@ suite( 'Validators.EmptyLines | ', () => {
   } );
 
   test( 'Should not be an error if defined empty lines are empty', () => {
-    const validLines = [ 'Handle error', '', `Create a map commit.`, '' ];
+    const validLines = [ 'Handle error', '', 'Create a map commit.', '' ];
     const hasErrors = emptyLines.validate( validLines );
     assert.equal( hasErrors, false, 'Lines 1 and 3 are empty. Valid' );
   } );
 
   test( 'Should be errors if defined empty lines are filled', () => {
-    const validLines = [ 'Handle', 'asdas', `Create at.`, 'foo' ];
+    const validLines = [ 'Handle', 'asdas', 'Create at.', 'foo' ];
     const hasErrors = emptyLines.validate( validLines );
 
     assert.equal( hasErrors, true, 'Line 1 and 3 are filled. Invalid' );
@@ -39,8 +39,10 @@ suite( 'Validators.EmptyLines | ', () => {
     validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
     error.clearErrorsMap();
 
-    const validLines = [ 'Handle error messages of a given commit longer than 50 chars', 'asdas', `Create a map to contain all the error messages of
-    a given commit.` ];
+    const validLines = [ 'Handle error messages of a given commit longer than 50 chars',
+      'asdas',
+      'Create a map to contain all the error messages of a given commit.',
+    ];
     const hasErrors = emptyLines.validate( validLines );
     assert.equal( hasErrors, false, 'There is no error' );
   } );

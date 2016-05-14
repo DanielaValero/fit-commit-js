@@ -22,13 +22,13 @@ suite( 'Validators.tenseSubject | ', () => {
   } );
 
   test( 'Does not throw error if the first word is an imperative verb', () => {
-    const commitLines = [ 'allow to do a nice validation', '', `Create a map commit.`, '' ];
+    const commitLines = [ 'allow to do a nice validation', '', 'Create a map commit.', '' ];
     const hasErrors = tenseSubject.validate( commitLines );
     assert.equal( hasErrors, false, 'None of the words was used in the commit message' );
   } );
 
   test( 'Throws an error if the first word is an imperative verb', () => {
-    const validLines = [ 'Handles something', 'asdas', `Create at.`, 'foo' ];
+    const validLines = [ 'Handles something', 'asdas', 'Create at.', 'foo' ];
     const hasErrors = tenseSubject.validate( validLines );
 
     assert.equal( hasErrors, true, 'The first word is not an imperative verb' );
@@ -39,8 +39,10 @@ suite( 'Validators.tenseSubject | ', () => {
     validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
     error.clearErrorsMap();
 
-    const validLines = [ 'Handle error messages of a given commit longer than 50 chars', 'asdas', `Create a map to contain all the error messages of
-    a given commit.` ];
+    const validLines = [ 'Handle error messages of a given commit longer than 50 chars',
+      'asdas',
+      'Create a map to contain all the error messages of a given commit.',
+    ];
     const hasErrors = tenseSubject.validate( validLines );
     assert.equal( hasErrors, false, 'There is no error' );
   } );

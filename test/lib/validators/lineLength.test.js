@@ -22,28 +22,41 @@ suite( 'Validators.LineLength | ', () => {
   } );
 
   test( 'Should not be an error if the line lengths are valid', () => {
-    const validLines = [ 'Handle error messages of a given commit', '', `Create a map to contain all the error messages of
-    a given commit.`, ];
+    const validLines = [ 'Handle error messages of a given commit',
+      '',
+      'Create a map to contain all the error messages of a given commit.',
+    ];
     const hasErrors = lineLength.validate( validLines );
     assert.equal( hasErrors, false, 'All the lines are valid' );
   } );
 
   test( 'Should be errors if the line lengths are invalid', () => {
-    const validLines = [ 'Handle error messages of a given commit longer than 50 chars', 'asdas', `Create a map to contain all the error messages of
-    a given commit.`, ];
+    const validLines = [ 'Handle error messages of a given commit longer than 50 chars',
+      'asdas',
+      'Create a map to contain all the error messages of a given commit.',
+    ];
     const hasErrors = lineLength.validate( validLines );
 
     assert.equal( hasErrors, true, 'The lines are invalid' );
   } );
 
   test( 'Should be errors if the line first line is invalid', () => {
-    const validLines = [ 'First Line Error - Handle error messages of a given commit longer than 50 chars', '', 'some text', ];
+    const validLines = [
+      'First Line Error - Handle error messages of a given commit longer than 50 chars',
+      '',
+      'some text',
+    ];
     const hasErrors = lineLength.validate( validLines );
     assert.equal( hasErrors, true, 'First line longer than specified length' );
   } );
 
   test( 'Should be errors if third line longer than specified', () => {
-    const validLines = [ 'Handle error messages of a given commit', 'not empty', `Third line: Create a map to contain all the error messages of a given commit. Create a map to contain all the error messages of a given commit.` ];
+    const validLines = [
+      'Handle error messages of a given commit',
+      'not empty',
+      `Third line: Create a map to contain all the error messages of a given commit.
+      Create a map to contain all the error messages of a given commit.`,
+    ];
     const hasErrors = lineLength.validate( validLines );
 
     assert.equal( hasErrors, true, 'Third line longer than specified' );
@@ -54,8 +67,10 @@ suite( 'Validators.LineLength | ', () => {
     validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
     error.clearErrorsMap();
 
-    const validLines = [ 'Handle error messages of a given commit longer than 50 chars', 'asdas', `Create a map to contain all the error messages of
-    a given commit.`, ];
+    const validLines = [ 'Handle error messages of a given commit longer than 50 chars',
+      'asdas',
+      'Create a map to contain all the error messages of a given commit.',
+    ];
     const hasErrors = lineLength.validate( validLines );
     assert.equal( hasErrors, false, 'There is no error' );
   } );

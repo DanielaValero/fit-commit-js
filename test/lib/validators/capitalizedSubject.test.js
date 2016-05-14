@@ -22,13 +22,13 @@ suite( 'Validators.capitalizedSubject | ', () => {
   } );
 
   test( 'Does not throw error if the first word is capitalized', () => {
-    const commitLines = [ 'Allow to do a nice validation', '', `Create a map commit.`, '' ];
+    const commitLines = [ 'Allow to do a nice validation', '', 'Create a map commit.', '' ];
     const hasErrors = capitalizedSubject.validate( commitLines );
     assert.equal( hasErrors, false );
   } );
 
   test( 'Throws an error if the first word  is not capitalized', () => {
-    const validLines = [ 'handles something', 'asdas', `Create at.`, 'foo' ];
+    const validLines = [ 'handles something', 'asdas', 'Create at.', 'foo' ];
     const hasErrors = capitalizedSubject.validate( validLines );
 
     assert.equal( hasErrors, true, 'The first word is not capitalized' );
@@ -39,8 +39,10 @@ suite( 'Validators.capitalizedSubject | ', () => {
     validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
     error.clearErrorsMap();
 
-    const validLines = [ 'Handle error messages of a given commit longer than 50 chars', 'asdas', `Create a map to contain all the error messages of
-    a given commit.` ];
+    const validLines = [ 'Handle error messages of a given commit longer than 50 chars',
+      'asdas',
+      'Create a map to contain all the error messages of a given commit.',
+    ];
     const hasErrors = capitalizedSubject.validate( validLines );
     assert.equal( hasErrors, false, 'There is no error' );
   } );
