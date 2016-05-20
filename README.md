@@ -13,13 +13,21 @@ It creates a git commit hook that will be run each time you do a commit for your
 
 - [Fit commit js](#fit-commit-js)
 - [Table of contents](#table-of-contents)
+- [Why to validate commits and reasons behind each rule](#why-to-validate-commits-and-reasons-behind-each-rule)
+- [Installation and Configuration](#installation-and-configuration)
 - [Available Validators](#available-validators)
 - [Sample of config file](#sample-of-config-file)
 - [Black list of words for the subject](#black-list-of-words-for-the-subject)
-- [Guidelines](#guidelines)
-- [Supported config files:](#supported-config-files)
+- [Guidelines to contribute](#guidelines-to-contribute)
+- [Supported config files](#supported-config-files)
 
 <!-- /TOC -->
+
+# Why to validate commits and reasons behind each rule
+
+We all want always to become better developers, in order to do so, we need to learn new things every day. One of the strategies to learning and using new ways to work, is to understand the reasons behind them.
+
+In order to get more insights behind why it is important to validate commit messages, and the whys behind each of the rules in this package, check out the [wiki in github](https://github.com/DanielaValero/fit-commit-js/wiki)
 
 # Installation and Configuration
 
@@ -173,7 +181,7 @@ validators:
   'uses', 'using', 'used'
 ``
 
-# Guidelines
+# Guidelines to contribute
  - Use the ES2015 features [supported by node](https://nodejs.org/en/docs/es6/)
  - TDD with mocha, chai and sinon
  - Functional programming with ramda
@@ -181,7 +189,7 @@ validators:
  - Allow spaces inside "(),{} and []"
 
 
-# Supported config files:
- - .fitcommigjs.json
- - .fitcommitjs.{yml,yaml}
+# Supported config files
+ - .fitcommitjsrc.json
+ - .fitcommitjsrc.{yml,yaml}
  - .package.json with a key: fitcommitjsConfig
