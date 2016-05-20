@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/DanielaValero/fit-commit-js"
   },
+  "bugs": {
+    "url": "https://github.com/DanielaValero/fit-commit-js/issues"
+  },
   "scripts": {
     "jscs": "./node_modules/jscs/bin/jscs -v lib/**/*.js && ./node_modules/jscs/bin/jscs -v test/**/*.js",
     "eslint": "./node_modules/eslint/bin/eslint.js lib/**/*.js &&  ./node_modules/eslint/bin/eslint.js test/lib/**/*.js",
@@ -18,12 +21,14 @@
     "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"
   },
   "engines": {
-    "node": ">=5.8.0"
+    "node": "~5.8.0"
   },
+  "engineStrict": true,
   "keywords": [
     "git",
     "commit",
-    "fit-commit"
+    "fit-commit",
+    "fit-commit-js"
   ],
   "dependencies": {
     "git-rev-sync": "^1.4.0",
