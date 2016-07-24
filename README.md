@@ -37,6 +37,12 @@ To install it run:
 $ npm i fit-commit-js
 ``
 
+Then you need to install the commit hook in your repo by doing:
+
+``
+$./node_modules/fit-commit-js/bin/fit-commit-js.js install
+``
+
 Then create your fitcomitjsrc.{yml, yaml, json} with your settings, and place it at the root of your project.
 
 You can also add a section in your package.json called: "fitcommitjsConfig", and add there your settings.
