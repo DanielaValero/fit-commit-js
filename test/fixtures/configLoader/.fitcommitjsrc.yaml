@@ -7,11 +7,11 @@ validators:
   emptyLines:
     enabled: true
     emptyLines: 1,3
-  tense:
+  tenseSubject:
     enabled: true
   subjectPeriod:
     enabled: false
-  capitalizeSubject:
+  capitalizedSubject:
     enabled: true
   wip:
     enabled: true

@@ -8,11 +8,11 @@ validators:
   emptyLines:
     enabled: true
     emptyLines: 1,3
-  tense:
+  tenseSubject:
     enabled: false
   subjectPeriod:
     enabled: false
-  capitalizeSubject:
+  capitalizedSubject:
     enabled: false
   wip:
     enabled: true
