@@ -21,13 +21,13 @@ suite( 'Validators.tenseSubject | ', () => {
     done();
   } );
 
-  test( 'Does not throw error if the first word is an imperative verb', () => {
+  test( 'Passes if the first word is an imperative verb', () => {
     const commitLines = [ 'allow to do a nice validation', '', 'Create a map commit.', '' ];
     const hasErrors = tenseSubject.validate( commitLines );
-    assert.equal( hasErrors, false, 'None of the words was used in the commit message' );
+    assert.equal( hasErrors, false, 'First word was not in the allowed verbs' );
   } );
 
-  test( 'Throws an error if the first word is an imperative verb', () => {
+  test( 'Throws an error if the first word is not imperative', () => {
     const validLines = [ 'Handles something', 'asdas', 'Create at.', 'foo' ];
     const hasErrors = tenseSubject.validate( validLines );
 
