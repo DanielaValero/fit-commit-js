@@ -1,7 +1,6 @@
 'use strict';
 
 const assert = require( 'chai' ).assert;
-const process = require( 'process' );
 const path = require( 'path' );
 const sinon = require( 'sinon' );
 const proxyquire = require( 'proxyquire' );
@@ -39,7 +38,8 @@ suite( 'Hook | ', () => {
     assert.notEqual( message, '' );
   } );
 
-  test( 'Should send the commit messate string to the message parser and get an array out of it', () => {
+  test( `Should send the commit messate string to the
+    message parser and get an array out of it`, () => {
     const parsedMessage = hook.getParsedMessage();
     assert.typeOf( parsedMessage, 'array', 'ParsedMessage is an array' );
     assert.include( parsedMessage, 'This is a relevant line' );
@@ -49,7 +49,11 @@ suite( 'Hook | ', () => {
     const lineLenthValidatorSpy = sandbox.spy( lineLenth, 'validate' );
     const emptyLinesValidatorSpy = sandbox.spy( emptyLines, 'validate' );
     hook.runValidators( fixturesPath );
-    assert.equal( emptyLinesValidatorSpy.called, true, 'The emptyLines.validate function was called' );
-    assert.equal( lineLenthValidatorSpy.called, true, 'The lineLenth.validate function was called' );
+    assert.equal( emptyLinesValidatorSpy.called,
+      true,
+      'The emptyLines.validate function was called' );
+    assert.equal( lineLenthValidatorSpy.called,
+      true,
+      'The lineLenth.validate function was called' );
   } );
 } );
