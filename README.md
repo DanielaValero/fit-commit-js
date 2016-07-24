@@ -114,11 +114,11 @@ validators:
     enabled: true
     tags: bugfix, chore, feature
     lineOfTheTag: 4
-  tense:
+  subjectTense:
     enabled: true
   subjectPeriod:
     enabled: true
-  capitalizeSubject:
+  capitalizedSubject:
     enabled: true
   wip:
     enabled: true
