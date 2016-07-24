@@ -13,3 +13,4 @@ Guidelines when adding new code:
 * Create always tests.
 * Ensure the entire test suite still passes by running `npm test`.
 * Ensure that the code does not have lintin errors by running: `npm run lint`
+* Install the commit validator by running: ./bin/fit-commit-js.js install

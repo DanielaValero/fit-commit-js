@@ -15,7 +15,8 @@ suite( 'validatorsConfig | ', () => {
   } );
 
   test( 'Enabled validators object should be empty if no config file found', () => {
-    validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
+    const pathWithoutConfig = path.resolve( __dirname, '../../../../' );
+    validatorsConfig.loadEnabledValidatorsObject( pathWithoutConfig );
     const validators = validatorsConfig.getEnabledValidators();
     assert.isObject( validators, true );
     assert.equal( Object.keys( validators ).length, 0, 'The length of the validators object is 0' );

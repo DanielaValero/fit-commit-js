@@ -36,7 +36,8 @@ suite( 'Validators.subjectPeriod | ', () => {
 
   test( 'Should not be errors if the validator is not enabled or not config object', () => {
     validatorsConfig.clearEnabledValidators();
-    validatorsConfig.loadEnabledValidatorsObject( path.resolve( __dirname, '../' ) );
+    const pathWithoutConfig = path.resolve( __dirname, '../../../../' );
+    validatorsConfig.loadEnabledValidatorsObject( pathWithoutConfig );
     error.clearErrorsMap();
 
     const validLines = [ 'Handle error messages of a given commit longer than 50 chars',

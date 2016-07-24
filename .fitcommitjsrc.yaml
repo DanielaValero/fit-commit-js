@@ -1,24 +1,21 @@
 ---
 validators:
+  tenseSubject:
+    enabled: true
   lineLength:
     enabled: true
     maxLineLength: 72
     subjectMaxLength: 50
   ticketCode:
-    enabled: true
-    ticketCodeText: 'FITCOMMITJS-'
-    oneTicketPerCommit: true
+    enabled: false
   emptyLines:
     enabled: true
-    emptyLines: 1,3
+    emptyLines: 1
   tags:
     enabled: true
-    tags: bugfix, chore, feature
-    lineOfTheTag: 4
-  tenseSubject:
-    enabled: true
+    tags: fix, chore, feature, style, docs
   subjectPeriod:
-    enabled: true
+    enabled: false
   capitalizedSubject:
     enabled: true
   wip:

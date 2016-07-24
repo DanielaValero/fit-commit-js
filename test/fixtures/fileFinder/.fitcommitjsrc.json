@@ -6,13 +6,13 @@
       "subjectMaxLength": 50,
       "allowLongUrls": true
     },
-    "tense": {
+    "tenseSubject": {
       "enabled": true
     },
     "subjectPeriod": {
       "enabled": false
     },
-    "capitalizeSubject": {
+    "capitalizedSubject": {
       "enabled": true
     },
     "wip": {
