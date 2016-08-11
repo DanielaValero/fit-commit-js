@@ -5,6 +5,9 @@
   "author": "Daniela Valero",
   "license": "GPL-2.0",
   "main": "bin/fit-commit-js.js",
+  "bin": {
+    "fit-commit-js": "./bin/fit-commit-js.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/DanielaValero/fit-commit-js"
