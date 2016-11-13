@@ -93,8 +93,8 @@ Ensures that the subject ends with period
 
  Default Value: N/A
 
-# Sample of config file
-
+# Sample of configs
+### Yaml
 
 ```
 ---
@@ -123,6 +123,49 @@ validators:
   wip:
     enabled: true
     branch: master
+```
+
+### Json
+
+```
+...
+  "fitcommitjsConfig" : {
+    "validators" : {
+      "lineLength" : {
+        "enabled" : true,
+        "maxLineLength" : 72,
+        "subjectMaxLength" : 50
+      },
+      "ticketCode" : {
+        "enabled" : true,
+        "ticketCodeText" : "FITCOMMITJS-",
+        "oneTicketPerCommit" : false
+      },
+      "emptyLines" : {
+        "enabled" : true,
+        "emptyLines" : 13
+      },
+      "tags" : {
+        "enabled" : true,
+        "tags" : "bugfix, chore, feature",
+        "lineOfTheTag" : 4
+      },
+      "subjectTense" : {
+        "enabled" : true
+      },
+      "subjectPeriod" : {
+        "enabled" : true
+      },
+      "capitalizedSubject" : {
+        "enabled" : true
+      },
+      "wip" : {
+        "enabled" : true,
+        "branch" : "master"
+      }
+    }
+  }
+...
 ```
 
 # Black list of words for the subject
