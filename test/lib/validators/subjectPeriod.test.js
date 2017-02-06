@@ -21,17 +21,17 @@ suite( 'Validators.subjectPeriod | ', () => {
     done();
   } );
 
-  test( 'Does not throw error if the subject ends with period', () => {
+  test( 'Throws an error if the subject ends with a period', () => {
     const commitLines = [ 'Allow to do a nice validation.', '', 'Create a map commit.', '' ];
     const hasErrors = subjectPeriod.validate( commitLines );
-    assert.equal( hasErrors, false );
+    assert.equal( hasErrors, true );
   } );
 
-  test( 'Throws an error if subject does not end with period', () => {
+  test( 'Throws an error if subject does not end with a period', () => {
     const validLines = [ 'handles something', 'asdas', 'Create at.', 'foo' ];
     const hasErrors = subjectPeriod.validate( validLines );
 
-    assert.equal( hasErrors, true, 'The first word is not capitalized' );
+    assert.equal( hasErrors, false, 'The first word is not capitalized' );
   } );
 
   test( 'Should not be errors if the validator is not enabled or not config object', () => {
