@@ -17,6 +17,7 @@
   },
   "scripts": {
     "lint": "eslint lib/**/*.js &&  eslint test/lib/**/*.js",
+    "fitcommitjs": "bin/fit-commit-js.js",
     "test": "NODE_ENV=test mocha --harmony --recursive --ui tdd --reporter dot",
     "watch": "NODE_ENV=test mocha debug --recursive  --watch --reporter dot --harmony",
     "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"

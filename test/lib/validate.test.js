@@ -4,7 +4,7 @@ const { assert } = require( 'chai' );
 const path = require( 'path' );
 const sinon = require( 'sinon' );
 const proxyquire = require( 'proxyquire' );
-const hook = require( '../../lib/hook' );
+const validate = require( '../../lib/validate' );
 const validatorsConfig = require( '../../lib/config/validatorsConfig' );
 const lineLenth = proxyquire( '../../lib/validators/lineLength', {
   validate: function validate() {
@@ -17,7 +17,7 @@ const emptyLines = proxyquire( '../../lib/validators/emptyLines', {
   },
 } );
 
-suite( 'Hook | ', () => {
+suite( 'validate | ', () => {
   const fixturesPath = path.resolve( __dirname, '../fixtures/hook/' );
   const commitMessageMock = path.join( fixturesPath, 'commitMessage' );
   let sandbox;
@@ -34,13 +34,13 @@ suite( 'Hook | ', () => {
   } );
 
   test( 'Should extract the message from the commit and delivers a string', () => {
-    const message = hook.extractCommitMessage();
+    const message = validate.extractCommitMessage();
     assert.notEqual( message, '' );
   } );
 
   test( `Should send the commit messate string to the
     message parser and get an array out of it`, () => {
-    const parsedMessage = hook.getParsedMessage();
+    const parsedMessage = validate.getParsedMessage();
     assert.typeOf( parsedMessage, 'array', 'ParsedMessage is an array' );
     assert.include( parsedMessage, 'This is a relevant line' );
   } );
@@ -48,7 +48,7 @@ suite( 'Hook | ', () => {
   test( 'Should run the defined validators', () => {
     const lineLenthValidatorSpy = sandbox.spy( lineLenth, 'validate' );
     const emptyLinesValidatorSpy = sandbox.spy( emptyLines, 'validate' );
-    hook.runValidators( fixturesPath );
+    validate.run( fixturesPath );
     assert.equal( emptyLinesValidatorSpy.called,
       true,
       'The emptyLines.validate function was called' );
