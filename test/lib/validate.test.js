@@ -24,7 +24,8 @@ suite( 'validate | ', () => {
 
   suiteSetup( () => {
     sandbox = sinon.sandbox.create();
-    sandbox.stub( process, 'argv', [ '/path/to/node', '/path/to/gitHook', commitMessageMock ] );
+    const fakeArgs = [ '/path/to/node', '/path/to/gitHook', commitMessageMock ];
+    sandbox.stub( process, 'argv').value( fakeArgs );
   } );
 
   suiteTeardown( ( done ) => {
