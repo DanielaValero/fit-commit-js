@@ -1,4 +1,4 @@
-const assert = require( 'chai' ).assert;
+const { assert } = require( 'chai' );
 const parser = require( '../../../lib/message/parser' );
 
 suite( 'Message.Parser | ', () => {

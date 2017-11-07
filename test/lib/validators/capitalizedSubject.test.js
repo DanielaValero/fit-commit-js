@@ -1,4 +1,4 @@
-const assert = require( 'chai' ).assert;
+const { assert } = require( 'chai' );
 const path = require( 'path' );
 const capitalizedSubject = require( '../../../lib/validators/capitalizedSubject' );
 const error = require( '../../../lib/message/error' );

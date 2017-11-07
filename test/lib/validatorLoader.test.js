@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const assert = require( 'chai' ).assert;
+const { assert } = require( 'chai' );
 const validatorsConfig = require( '../../lib/config/validatorsConfig' );
 const validatorLoader = require( '../../lib/validatorLoader' );
 

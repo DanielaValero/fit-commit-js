@@ -1,4 +1,4 @@
-const assert = require( 'chai' ).assert;
+const { assert } = require( 'chai' );
 const path = require( 'path' );
 const tenseSubject = require( '../../../lib/validators/tenseSubject' );
 const error = require( '../../../lib/message/error' );
