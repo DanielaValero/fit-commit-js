@@ -23,7 +23,7 @@
     "debugTest": "NODE_ENV=test node-debug _mocha --recursive  --ui tdd --reporter dot"
   },
   "engines": {
-    "node": ">=4.7.0"
+    "node": ">=6.0.0"
   },
   "keywords": [
     "git",
