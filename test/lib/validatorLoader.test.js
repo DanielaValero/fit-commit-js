@@ -1,5 +1,5 @@
 const path = require( 'path' );
-const assert = require( 'chai' ).assert;
+const { assert } = require( 'chai' );
 const validatorsConfig = require( '../../lib/config/validatorsConfig' );
 const validatorLoader = require( '../../lib/validatorLoader' );
 
@@ -28,7 +28,7 @@ suite( 'validatorLoader | ', () => {
     const emptyLinesValidator = validators[ 0 ];
     assert.isArray( validators, 'Gets an array of validators' );
     assert.lengthOf( validators, 3, 'Loads 3 enabled validators' );
-    assert.deepProperty( validators[ 1 ], 'lineLength', 'Contains lineLength validator' );
+    assert.nestedProperty( validators[ 1 ], 'lineLength', 'Contains lineLength validator' );
     assert.typeOf( emptyLinesValidator.emptyLines.validate, 'function' );
   } );
 } );

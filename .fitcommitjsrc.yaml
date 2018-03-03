@@ -13,7 +13,7 @@ validators:
     emptyLines: 1
   tags:
     enabled: true
-    tags: fix, chore, feature, style, docs
+    tags: fix, chore, feat, test, docs
   subjectPeriod:
     enabled: false
   capitalizedSubject:

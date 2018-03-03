@@ -1,4 +1,4 @@
-const assert = require( 'chai' ).assert;
+const { assert } = require( 'chai' );
 const path = require( 'path' );
 const tags = require( '../../../lib/validators/tags' );
 const error = require( '../../../lib/message/error' );
@@ -38,11 +38,11 @@ suite( 'Validators.tags | ', () => {
     assert.equal( hasErrors, true, 'More than one tag was used. Invalid' );
   } );
 
-  test( 'Should be errors if one of defined tags was not used', () => {
+  test( 'Should be errors if no tag was used', () => {
     const validLines = [ 'Handle', 'asdas', 'Create at.', 'foo' ];
     const hasErrors = tags.validate( validLines );
 
-    assert.equal( hasErrors, true, 'None of the tags was used. Invalid' );
+    assert.equal( hasErrors, true, 'hasErrors is false. None of the tags was used. Invalid' );
   } );
 
   test( 'Should not be errors if the validator is not enabled or not config object', () => {

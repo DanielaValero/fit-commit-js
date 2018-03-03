@@ -1,6 +1,6 @@
 'use strict';
 
-const assert = require( 'chai' ).assert;
+const { assert } = require( 'chai' );
 const error = require( '../../../lib/message/error' );
 
 suite( 'Message.Error | ', () => {
@@ -31,14 +31,20 @@ suite( 'Message.Error | ', () => {
   test( 'Should return true if there are registered errors in a given validator', () => {
     error.addError( 'lineLength', 1, 'Subject should not be empty' );
 
-    assert.equal( error.hasErrors( 'lineLength' ), true,
-      'The errorsMap has errors in the given validator' );
-    assert.equal( error.hasErrors( 'otherValidator' ), false,
-      'In a not given validator there are no errors' );
+    assert.equal(
+      error.hasErrors( 'lineLength' ), true,
+      'The errorsMap has errors in the given validator',
+    );
+    assert.equal(
+      error.hasErrors( 'otherValidator' ), false,
+      'In a not given validator there are no errors',
+    );
   } );
 
   test( 'Should return false if there are no registered errors in a given validator', () => {
-    assert.equal( error.hasErrors( 'lineLength' ), false,
-      'The errorsMap has no registered errors for lineLength' );
+    assert.equal(
+      error.hasErrors( 'lineLength' ), false,
+      'The errorsMap has no registered errors for lineLength',
+    );
   } );
 } );
