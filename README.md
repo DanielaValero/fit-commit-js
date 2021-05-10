@@ -114,7 +114,7 @@ validators:
     enabled: true
     tags: bugfix, chore, feature
     lineOfTheTag: 4
-  subjectTense:
+  tenseSubject:
     enabled: true
   subjectPeriod:
     enabled: true
@@ -150,7 +150,7 @@ validators:
         "tags" : "bugfix, chore, feature",
         "lineOfTheTag" : 4
       },
-      "subjectTense" : {
+      "tenseSubject" : {
         "enabled" : true
       },
       "subjectPeriod" : {
